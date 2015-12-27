@@ -1,0 +1,16 @@
+INDEX VERSION 1.127+F:\图书管理销售系统\.metadata\.plugins\org.eclipse.jdt.core
+391386276.index
+2269379158.index
+2664359580.index
+2872222588.index
+2676736560.index
+2401366771.index
+3776210101.index
+1901201092.index
+1064671129.index
+1428155707.index
+3534169822.index
+1273293503.index
+2332456115.index
+4257325822.index
+3150627815.index

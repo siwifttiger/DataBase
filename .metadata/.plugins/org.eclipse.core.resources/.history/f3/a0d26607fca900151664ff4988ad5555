@@ -1,0 +1,63 @@
+package com.booksale.view;
+
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
+public class Login extends JFrame {
+	private JPanel jpNorth;
+	
+	private JPanel jpMid;
+	
+	private JLabel userName;
+	private JLabel password;
+	private JTextField user;
+	private JPasswordField psd;
+	private int width = Toolkit.getDefaultToolkit().getScreenSize().width;
+	private int height = Toolkit.getDefaultToolkit().getScreenSize().height;
+	
+	
+	//constructor 
+	public Login(){
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		//设置布局管理器
+		this.setLayout(new BorderLayout());
+		
+		//北边
+		jpNorth = new JPanel();
+		//中间
+		jpMid = new JPanel();
+		jpMid.setLayout(new GridLayout(2, 2));
+		userName = new JLabel("用户名");
+		password = new JLabel("密   码");
+		user = new JTextField(15);
+		psd = new JPasswordField();
+		jpMid.add(userName);
+		jpMid.add(user);
+		jpMid.add(password);
+		jpMid.add(psd);
+		
+		//基本属性
+		this.add("North",jpNorth);
+		this.add("Center", jpMid);
+		this.setResizable(false);
+		this.setSize(300,300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		
+	}
+		
+
+	
+	public static void main(String [] args){
+		Login lg = new  Login();
+		lg.setVisible(true);
+	}
+	
+}

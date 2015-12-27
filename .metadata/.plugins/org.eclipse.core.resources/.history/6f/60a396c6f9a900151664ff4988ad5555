@@ -1,0 +1,39 @@
+package com.booksale.view;
+
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
+public class Login extends JFrame {
+	private JPanel jp;
+	private JLabel userName;
+	private JLabel password;
+	private JTextField user;
+	private JPasswordField psd;
+	private int width = Toolkit.getDefaultToolkit().getScreenSize().width;
+	private int height = Toolkit.getDefaultToolkit().getScreenSize().height;
+	
+	public Login(){
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		this.setResizable(false);
+		this.setSize(300,300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocation(width/2-300,height/2-150);
+		
+		jp = new JPanel();
+		jp.setBorder(new EmptyBorder(5, 5, 5, 5));
+		jp.setLayout(null);
+	}
+	
+	public static void main(String [] args){
+		Login lg = new  Login();
+		lg.setVisible(true);
+	}
+	
+}
